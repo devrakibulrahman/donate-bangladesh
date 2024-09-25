@@ -147,7 +147,7 @@ function calculateBalance(input, balance, displayAmount, location){
     const displayAmountToNum = parseFloat(displayAmountToNumValue);
     
     if(mainBalance < 0 || balanceValue < inputValue){
-        alert('you have no more enough money in your account');
+        alert('you have no more enough money in your account!');
         inputField.value = '';
         return;
     };
