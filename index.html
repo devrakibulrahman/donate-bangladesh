@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh - home</title>
+    <!-- ============ google font link ============ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- ============ daisy UI cdn link ============ -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ============ tailwind CSS cdn link ============ -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ============ tailwind customization cdn link ============ -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily:{
+                lexend:"Lexend"
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body>
+    <!-- ============ header section ============ -->
+    <header id="stickyNav" class="w-full sticky top-0">
+        <!-- ============ navbar -->
+        <div class="w-full bg-[#F9F7F3]">
+            <div class="container mx-auto px-4">
+                <div class="py-6 flex items-center justify-between lg:pt-0 lg:pb-6 lg:min-h-[140px]">
+                    <!-- ============ blog button -->
+                    <button id="blogBtn" class="bg-[#B4F461] border border-[#B4F461] py-3 px-8 rounded-lg font-lexend text-xl leading-[25px] font-semibold text-[#111111] hidden transition duration-200 ease-in-out hover:bg-white hover:border hover:border-[#1111114D] hover:text-[#111111B3] lg:block">Blog</button>
+                    <!-- ============ logo -->
+                    <div class="flex items-center gap-x-4">
+                        <img src="./assets/money-img/logo.png" alt="logo" class="size-[38px] lg:size-[48px]">
+                        <h1 class="font-lexend text-xl leading-[25px] font-semibold text-[#111111] hidden lg:block">Donate Bangladesh</h1>
+                    </div>
+                    <!-- ============ balance -->
+                    <div class="flex items-center gap-x-2">
+                        <img src="./assets/money-img/coin.png" alt="coin icon" class="size-[27px]">
+                        <h1 class="font-lexend text-xl font-medium text-[#111111B3]"><span id="balance">10000</span> BDT</h1>
+                    </div>
+                    <!-- ============ mobile bar -->
+                    <div id="openBtn" class="cursor-pointer lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============ donate and history button -->
+        <div class="w-full h-[110px] bg-white/40 backdrop-blur-md flex items-center justify-center gap-x-3 pt-6 lg:h-[140px]">
+            <button id="donateBtn" class="py-3 px-5 bg-[#B4F461] border border-[#B4F461] rounded-md font-lexend text-base font-semibold text-[#111111] lg:py-4 lg:px-8 lg:text-xl lg:leading-[25px]">Donate</button>
+            <button id="historyBtn" class="py-3 px-5 bg-white border border-[#1111114D] rounded-md font-lexend text-base font-semibold text-[#111111B3] transition duration-200 ease-in-out hover:bg-[#B4F461] hover:border-[#B4F461] hover:text-[#111111] lg:py-4 lg:px-8 lg:text-xl lg:leading-[25px]">History</button>
+        </div>
+        <!-- ============ mobile responsive side bar -->
+        <div id="mobileNav" class="w-full sm:w-[400px] h-screen bg-white/80 backdrop-blur-md fixed top-[0%] right-[-120%] duration-500">
+            <!-- ============ close btn -->
+            <div id="closeBtn" class="w-[30px] h-[30px] flex items-center justify-center ml-6 mt-6 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </div>
+            <!-- ============ nav link list -->
+            <div class="w-full mt-10">   
+                <a href="#" id="navLink" class="py-4 px-7 bg-[#B4F461] block font-lexend text-base font-medium text-[#111111]">Blog</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============ main section ============ -->
+    <main class="container mx-auto px-4">
+        <!-- ========== donate tab -->
+        <div id="donateTab" class="w-full">
+            <!-- ========== card container -->
+            <div class="w-full flex flex-col items-center justify-center gap-y-4 mb-[40px] lg:mb-[80px] lg:gap-y-8">
+                <!-- ========== card 1 -->
+                <div class="w-full min-h-[200px] p-4 bg-white border border-[#1111111A] rounded-lg flex flex-col gap-y-5 sm:w-[550px] lg:w-full lg:flex-row lg:gap-x-8 xl:rounded-2xl xl:p-8">
+                    <div class="w-full h-[300px] bg-[url(./assets/card-img/noakhali.png)] bg-center bg-no-repeat bg-cover rounded-[6px] sm:h-[400px] lg:h-[416px] lg:rounded-lg xl:h-[458px] xl:rounded-xl 2xl:h-[465px]"></div>
+                    <div class="w-full min-h-[100px]">
+                        <div class="mb-2 flex items-center justify-start gap-x-4 lg:mb-4 xl:mb-5">
+                            <div class="px-[16px] py-[10px] bg-[#1111110D] flex items-center justify-between gap-x-2 rounded-[4px] lg:rounded-lg">
+                                <img src="./assets/money-img/coin.png" alt="coin icon" class="size-[20px] xl:size-[25px]">
+                                <h1 class="font-lexend text-base font-medium text-[#111111B3] xl:text-lg inline-block"><span id="donateDisplay-1">0</span> BDT</h1>
+                            </div>
+                        </div>
+                        <div class="w-full mb-4 lg:mb-6">
+                            <h1 class="font-lexend text-xl leading-[30px] font-bold text-[#111111] mb-2 lg:mb-4 xl:text-2xl xl:leading-[34px] 2xl:text-3xl">Donate for Flood at Noakhali, Bangladesh</h1>
+                            <p class="font-lexend text-base leading-[26px] font-light text-[#111111B3] xl:text-lg xl:leading-[30px] 2xl:leading-[37px]">The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                        </div>
+                        <div class="w-full">
+                            <input id="input-1" type="text" placeholder="Write Donate Amount" autocomplete="off" class="w-full p-[18px] bg-white border border-[#1111111A] rounded-md mb-4 font-lexend text-base leading-5 font-light placeholder:text-[#11111166] text-[#111111] outline-none focus:ring-1 focus:ring-offset-2 focus:ring-[#1111111A] lg:rounded-[8px] xl:mb-4">
+                            <button id="donateButton-1" class="w-full py-4 bg-[#B4F461] rounded-md font-lexend text-base leading-5 font-semibold text-[#111111] transition duration-200 ease-in-out hover:bg-[#bff875] lg:text-xl lg:rounded-[8px]">Donate Now</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- ========== card 2 -->
+                <div class="w-full min-h-[200px] p-4 bg-white border border-[#1111111A] rounded-lg flex flex-col gap-y-5 sm:w-[550px] lg:w-full lg:flex-row lg:gap-x-8 xl:rounded-2xl xl:p-8">
+                    <div class="w-full h-[300px] bg-[url(./assets/card-img/feni.png)] bg-center bg-no-repeat bg-cover rounded-[6px] sm:h-[400px] lg:h-[468px] lg:rounded-lg xl:h-[518px] xl:rounded-xl 2xl:h-[502px]"></div>
+                    <div class="w-full min-h-[100px]">
+                        <div class="mb-2 flex items-center justify-start gap-x-4 lg:mb-4 xl:mb-5">
+                            <div class="px-[16px] py-[10px] bg-[#1111110D] flex items-center justify-between gap-x-2 rounded-[4px] lg:rounded-lg">
+                                <img src="./assets/money-img/coin.png" alt="coin icon" class="size-[20px] xl:size-[25px]">
+                                <h1 class="font-lexend text-base font-medium text-[#111111B3] xl:text-lg inline-block"><span id="donateDisplay-2">0</span> BDT</h1>
+                            </div>
+                        </div>
+                        <div class="w-full mb-4 lg:mb-6">
+                            <h1 class="font-lexend text-xl leading-[30px] font-bold text-[#111111] mb-2 lg:mb-4 xl:text-2xl xl:leading-[34px] 2xl:text-3xl">Donate for Flood Relief in Feni,Bangladesh</h1>
+                            <p class="font-lexend text-base leading-[26px] font-light text-[#111111B3] xl:text-lg xl:leading-[30px] 2xl:leading-[37px]">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+                        </div>
+                        <div class="w-full">
+                            <input id="input-2" type="text" placeholder="Write Donate Amount" autocomplete="off" class="w-full p-[18px] bg-white border border-[#1111111A] rounded-md mb-4 font-lexend text-base leading-5 font-light placeholder:text-[#11111166] text-[#111111] outline-none focus:ring-1 focus:ring-offset-2 focus:ring-[#1111111A] lg:rounded-[8px] xl:mb-4">
+                            <button id="donateButton-2" class="w-full py-4 bg-[#B4F461] rounded-md font-lexend text-base leading-5 font-semibold text-[#111111] transition duration-200 ease-in-out hover:bg-[#bff875] lg:text-xl lg:rounded-[8px]">Donate Now</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- ========== card 3 -->
+                <div class="w-full min-h-[200px] p-4 bg-white border border-[#1111111A] rounded-lg flex flex-col gap-y-5 sm:w-[550px] lg:w-full lg:flex-row lg:gap-x-8 xl:rounded-2xl xl:p-8">
+                    <div class="w-full h-[300px] bg-[url(./assets/card-img/quota-protest.png)] bg-center bg-no-repeat bg-cover rounded-[6px] sm:h-[400px] lg:h-[520px] lg:rounded-lg xl:h-[518px] xl:rounded-xl 2xl:h-[539px]"></div>
+                    <div class="w-full min-h-[100px]">
+                        <div class="mb-2 flex items-center justify-start gap-x-4 lg:mb-4 xl:mb-5">
+                            <div class="px-[16px] py-[10px] bg-[#1111110D] flex items-center justify-between gap-x-2 rounded-[4px] lg:rounded-lg">
+                                <img src="./assets/money-img/coin.png" alt="coin icon" class="size-[20px] xl:size-[25px]">
+                                <h1 class="font-lexend text-base font-medium text-[#111111B3] xl:text-lg inline-block"><span id="donateDisplay-3">0</span> BDT</h1>
+                            </div>
+                        </div>
+                        <div class="w-full mb-4 lg:mb-6">
+                            <h1 class="font-lexend text-xl leading-[30px] font-bold text-[#111111] mb-2 lg:mb-4 xl:text-2xl xl:leading-[34px] 2xl:text-3xl">Aid for Injured in the Quota Movement</h1>
+                            <p class="font-lexend text-base leading-[26px] font-light text-[#111111B3] xl:text-lg xl:leading-[30px] 2xl:leading-[37px]">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                        </div>
+                        <div class="w-full">
+                            <input id="input-3" type="text" placeholder="Write Donate Amount" autocomplete="off" class="w-full p-[18px] bg-white border border-[#1111111A] rounded-md mb-4 font-lexend text-base leading-5 font-light placeholder:text-[#11111166] text-[#111111] outline-none focus:ring-1 focus:ring-offset-2 focus:ring-[#1111111A] lg:rounded-[8px] xl:mb-4">
+                            <button id="donateButton-3" class="w-full py-4 bg-[#B4F461] rounded-md font-lexend text-base leading-5 font-semibold text-[#111111] transition duration-200 ease-in-out hover:bg-[#bff875] lg:text-xl lg:rounded-[8px]" onclick="showModal()">Donate Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ========== history tab -->
+        <div id="historyTab" class="hidden w-full">
+            <!-- ========== card container -->
+            <div id="container" class="w-full min-h-[64vh] lg:min-h-[55vh] py-5 space-y-4 lg:space-y-6 mt-4">
+            </div>
+        </div>
+        <!-- ========== popup modal -->
+        <dialog id="modal" class="modal">
+            <div class="modal-box sm:w-[300px] lg:w-full flex items-center justify-center flex-col text-center">
+                <h3 class="font-lexend text-3xl font-bold text-[#111111] mb-5">Congrates!</h3>
+                <img src="./assets/money-img/coin.png" alt="coin icon" class="size-8 mb-8">
+                <p class="font-lexend text-base font-light text-[#111111B3] mb-3">You Have Donate for Humankind</p>
+                <p class="font-lexend text-2xl font-semibold text-[#111111] mb-5">Successfully</p>
+                <div class="w-full">
+                    <form method="dialog">
+                        <button class="font-lexend text-base font-medium text-[#111111] py-4 px-4 bg-[#B4F461] rounded-lg">Close conformation</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+    </main>
+
+    <!-- ============ footer section ============ -->
+    <footer class="w-full">
+        <div class="w-full min-h-[140px] bg-[#F9F7F3] flex items-center justify-center">
+            <p class="font-lexend text-base font-normal text-[#111111]">&copy All right reserved Donate Bangladesh</p>
+        </div>
+    </footer>
+
+    <!-- ============ javascript link ============ -->
+    <script src="./js/index.js"></script>
+</body>
+</html>
