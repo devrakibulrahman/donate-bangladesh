@@ -124,6 +124,9 @@ function calculateBalance(input, balance, displayAmount, location){
     const inputField = input;
     const inputValue = parseFloat(inputField.value);
 
+    const inputValueToFixed = parseFloat(inputField.value).toFixed(2);
+    const inputValueToNum = parseFloat(inputValueToFixed);
+
     
     const mainBalance = balance;
     const balanceValue = mainBalance.innerText;
@@ -152,10 +155,10 @@ function calculateBalance(input, balance, displayAmount, location){
         return;
     };
     
-    const donateAmountShow = displayAmountToNum + inputValue;
+    const donateAmountShow = displayAmountToNum + inputValueToNum;
     displayAmountNum.innerText = donateAmountShow;
     
-    const donateAmountSubtractToBalance = balanceToNum - inputValue;
+    const donateAmountSubtractToBalance = balanceToNum - inputValueToNum;
     mainBalance.innerText = donateAmountSubtractToBalance;
     
     inputField.value = '';
@@ -163,7 +166,7 @@ function calculateBalance(input, balance, displayAmount, location){
     const modal = document.getElementById('modal');
     modal.showModal();
 
-    historyTab(inputValue, location);
+    historyTab(inputValueToNum, location);
     
     return;
 };
