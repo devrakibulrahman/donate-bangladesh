@@ -34,6 +34,9 @@ closeBtn.addEventListener('click', function(){
 const navLink = document.getElementById('navLink');
 navLink.addEventListener('click', function(){
     const mobileNav = document.getElementById('mobileNav');
+
+    window.location.href = './index.html';
+
     addOrRemove(mobileNav, mobileNav);
 });
 
